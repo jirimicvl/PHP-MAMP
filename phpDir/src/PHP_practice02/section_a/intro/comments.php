@@ -12,7 +12,7 @@
   </head>
   <body>
     <h1>The Candy Store</h1>
-    <h2><?php echo 'Welcome Ivy'; // Show name ?></h2>
-    <?php echo '<p class="offer">Offer: 20% off</p>' ?>
+    <h2><?php echo 'Welcome MrJay'; // Show name ?></h2>
+    <?php echo '<p class="offer">Offer: 90% off</p>' ?>
   </body>
 </html>
