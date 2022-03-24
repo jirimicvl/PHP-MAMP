@@ -4,6 +4,8 @@
 // but display only three best-selling items on the page. 
 // The list of best-sellers could be e.g. Chocolate, Mints, Fudge, Bubble gum, Toffee, Jelly Beans etc
 
+$bestSellers = ["Chocolate", "Mints", "Fudge", "Bubble gum", "Toffee", "Jelly Beans"];
+
 ?>
 <!DOCTYPE html>
 <html>
@@ -19,13 +21,12 @@
 
   <?php
 
-  $bestSellers = ["Chocolate", "Mints", "Fudge", "Bubble gum", "Toffee", "Jelly Beans"];
+  for ($i = 0; $i <= 2; $i++) {
+    echo '<p>' . $bestSellers[$i] . '</p>';
+  }
 
-
   
-  
-  
-  ;?>
+;?>
 
 </body>
 
