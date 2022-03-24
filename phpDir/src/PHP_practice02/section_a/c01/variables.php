@@ -1,10 +1,7 @@
 <?php
-
-/* 
-  Write you php code here
-
-   */
-
+$name = "Eric";
+$candyName = "Temberone";
+$candyCost = 5;
 ?>
 <!DOCTYPE html>
 <html>
@@ -16,14 +13,9 @@
 
 <body>
   <h1>The Candy Store</h1>
-  <?php
-  $candyName = "Temberone";
-  $candyCost = 5;
-
-  echo $candyName,' costs ',$candyCost, ' euros'
+  <p> Welcome <?=$name?> </p>
+  <p> Your candy ,<?=$candyName ?>, costs <?=$candyCost?> euros </p>
   
-  
-  ;?>
 
 </body>
 

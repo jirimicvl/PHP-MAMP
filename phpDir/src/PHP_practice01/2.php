@@ -29,12 +29,27 @@
 
 		//   Step 2: Add the two variables and display the sum with echo:
 		$sum = $number1 + $number2;
-		echo $sum;
+		echo $sum . "<br>"; // 30
 
 
 		//   Step3: Make 2 Arrays with the same values, one regular and the other associative
-		$regular = [$number1,$number2];
-		$associative = ["1" => $number1, "2" => $number2];
+		$lists = array(24, 234, 2343, 234);
+
+		$lists_assoc = array("number" => 10);
+
+
+		echo $lists[0] . "<br>"; // 24
+
+
+
+		echo $lists_assoc["number"] . "<br>"; //10
+
+
+
+
+
+		// $regular = [$number1,$number2];
+		// $associative = ["1" => $number1, "2" => $number2];
 
 		?>
 
