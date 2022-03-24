@@ -2,7 +2,9 @@
 
 /* 
   Write you php code here
-
+  Write a PHP code to compare and check if the quantity wanted is less than or equal to quantity in stock. 
+  If the user can buy based on comparison and if value is true, page should show 1 
+  if false, the page should show nothing.
    */
 
 ?>
