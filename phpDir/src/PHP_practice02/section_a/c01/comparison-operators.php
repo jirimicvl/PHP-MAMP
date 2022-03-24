@@ -7,6 +7,13 @@
   if false, the page should show nothing.
    */
 
+  $offers = [
+    ["name" => "iPhone13", "price" => 1000, "stock" => 2],
+    ["name" => "iPhone15", "price" => 1000, "stock" => 0],
+    ["name" => "MacBook", "price" => 2000, "stock" => 4],
+    ["name" => "MacMini", "price" => 1600, "stock" => 3],
+  ];
+
 ?>
 <!DOCTYPE html>
 <html>
@@ -19,6 +26,7 @@
 <body>
   <h1>The Candy Store</h1>
   <h2>Shopping Cart</h2>
+  <p><?= $offers[1]["stock"] > 0 ?></p>
 
 </body>
 
