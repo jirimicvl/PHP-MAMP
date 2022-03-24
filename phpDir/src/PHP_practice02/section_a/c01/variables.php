@@ -20,7 +20,7 @@
   $candyName = "Temberone";
   $candyCost = 5;
 
-  echo $candyName,' costs ',$candyCost, ' euroes'
+  echo $candyName,' costs ',$candyCost, ' euros'
   
   
   ;?>
