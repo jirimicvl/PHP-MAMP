@@ -16,6 +16,14 @@
 
 <body>
   <h1>The Candy Store</h1>
+  <?php
+  $candyName = "Temberone";
+  $candyCost = 5;
+
+  echo $candyName,' costs ',$candyCost, ' euroes'
+  
+  
+  ;?>
 
 </body>
 
