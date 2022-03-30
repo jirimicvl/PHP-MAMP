@@ -1,39 +1,60 @@
 <?php
-// Create three functions to generate the values as shown in this table. 
-// -The first function should look at stock levels and create a message indicating wheather or not more stock should be ordered. 
-// -The second function should find the total value of stock for each item that is sold. 
-// -And finally the third function -> calculate how much tax will be due when all of the remaining stock has been sold. 
-/**
- * Write your code here
- */
 
- 
-?>
-<!DOCTYPE html>
-<html>
+$candy=[ 
+  'Toffee'=> ['price' => 3, 'stock'=> 12],
+  'Mints' => ['price' => 2, 'stock'=> 26],
+  'Fudge' => ['price' => 4, 'stock'=> 8],
+];
+  
+  $tax = 20;
+  
+  function get_reorder_message(int $stock): string {
+    return ($stock< 10) ? 'Yes' : 'No';}
+    
+    function get_total_value(float $price, int $quantity): float{return $price * $quantity;}
+    
+    function get_tax_due(float $price, int $quantity, int $tax=0 ): float{
+      return ($price * $quantity) * ($tax / 100);}?>
 
-<head>
-  <title>Basic Functions</title>
-  <link rel="stylesheet" href="css/styles.css">
-</head>
+        <!DOCTYPE html>
+        <html>
 
-<body>
-  <h1>The Candy Store</h1>
-  <h2>Stock Control</h2>
-  <table>
-    <tr>
-      <th>Product</th>
-      <th>Stock</th>
-      <th>Re-order</th>
-      <th>Total value</th>
-      <th>Tax due</th>
-    </tr>
-    <?php
-    /**
-     * Write your code here
-     */
-    ?>
-  </table>
-</body>
+        <head>
+            <title>Basic Functions</title>
+            <link rel="stylesheet" href="css/styles.css">
+        </head>
 
-</html>
+        <body>
+            <h1>The Candy Store</h1>
+            <h2>Stock Control</h2>
+            <table>
+                <tr>
+                    <th>Product</th>
+                    <th>Stock</th>
+                    <th>Re-order</th>
+                    <th>Total value</th>
+                    <th>Tax due</th>
+                </tr>
+                <?php foreach ($candy as $product=> $data) { ?>
+                <tr>
+                    <td>
+                        <?=$product ?>
+                    </td>
+                    <td>
+                        <?=$data[ 'stock'] ?>
+                    </td>
+                    <td>
+                        <?=get_reorder_message($data[ 'stock']) ?>
+                    </td>
+                    <td>
+                        <?=get_total_value($data[ 'price'], $data[ 'stock']) ?>
+                    </td>
+                    <td>
+                        <?=get_tax_due($data[ 'price'], $data[ 'stock'], $tax) ?>
+                    </td>
+                </tr>
+                <?php }?>
+            </table>
+        </body>
+
+        </html>
