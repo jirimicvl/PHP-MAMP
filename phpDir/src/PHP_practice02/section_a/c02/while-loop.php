@@ -4,7 +4,8 @@
 // Display the prices for all the 5 packs of candy. 
 
 
-
+$sumPrice = 0;
+$candyAmount = 0;
 
 ?>
 <!DOCTYPE html>
@@ -20,7 +21,15 @@
   <h2>Prices for Multiple Packs</h2>
   <p>
     <?php
-    /* Write your code here */
+    
+    
+
+  while ($candyAmount <= 5) {
+    $candyAmount++;
+    $sumPrice += 1.99;
+    echo $candyAmount . " candy pack cost " . $sumPrice . "<br>";
+  };
+
     ?>
   </p>
 </body>

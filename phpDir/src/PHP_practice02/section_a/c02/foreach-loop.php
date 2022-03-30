@@ -1,7 +1,10 @@
 <?php
-/* 
-    Write your code here
-     */
+/* Create a simple foreach loop for candy products 
+e.g. Toffee costs 2.99, Mints cost 1.99 and Fudge costs 3.49 
+show it in the web page table  */
+
+$candy = array("toffee" => "2.99", "mint" => "3.49", "fudge" => "3.49");
+
 ?>
 <!DOCTYPE html>
 <html>
@@ -20,9 +23,10 @@
       <th>Price</th>
     </tr>
     <?php
-    /* 
-    Write your code here
-     */
+    foreach($candy as $x => $val) {
+      echo "$x = $val<br>";
+    }
+
     ?>
   </table>
 </body>

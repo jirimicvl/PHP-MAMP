@@ -1,8 +1,13 @@
 <?php
-
+// Create three functions to generate the values as shown in this table. 
+// -The first function should look at stock levels and create a message indicating wheather or not more stock should be ordered. 
+// -The second function should find the total value of stock for each item that is sold. 
+// -And finally the third function -> calculate how much tax will be due when all of the remaining stock has been sold. 
 /**
  * Write your code here
  */
+
+ 
 ?>
 <!DOCTYPE html>
 <html>
