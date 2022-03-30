@@ -1,5 +1,11 @@
 <?php
-/* Write your code here */
+// Create a simple while loop to find prices for multiple packs of candy. 
+// For example if one pack costs $1.99 how much would 5 pack costs. 
+// Display the prices for all the 5 packs of candy. 
+
+
+
+
 ?>
 <!DOCTYPE html>
 <html>

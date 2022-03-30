@@ -10,7 +10,14 @@
 </head>
 <h1>The Candy Store</h1>
 <?php
-/* Write your code here */
+
+$name = "Niina";
+if ($name != "") {
+  echo "Welcome " . $name;
+} else {
+  echo "No name";
+};
+
 ?>
 </body>
 
