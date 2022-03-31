@@ -13,17 +13,18 @@
 
   <article class="main-content col-xs-8">
 
-
+  <form action="6.php" method="POST">    
+    <input type="text" name="submit" id="textbox">    
+    <button type="submit">Submit</button>
+  </form>
+    
+    
     <?php
 
-		/*  Step1: Make a form that submits one value to POST super global
-
-
- */
-
-
-		?>
-
+    if (isset($_POST["submit"])) {
+    echo $_POST["submit"];
+  }
+  ?>
 
   </article>
   <!--MAIN CONTENT-->
