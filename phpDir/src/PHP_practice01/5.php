@@ -15,15 +15,31 @@
 	<?php 
 
 
-/*  Step1: Use a pre-built math function here and echo it
+/*  Step1: 
 
 
-	Step 2:  Use a pre-built string function here and echo it
+
+	
 
 
-	Step 3:  Use a pre-built Array function here and echo it
+	
 
  */
+
+
+
+
+//  step 1 - Use a pre-built math function here and echo it
+echo pi() . "<br>";
+
+// Step 2:  Use a pre-built string function here and echo it
+$string = "mouse";
+echo strlen($string) . "<br>";
+
+// Step 3:  Use a pre-built Array function here and echo it
+$cars = array("BMW", "Lambo", "Mercedes");
+echo count($cars) . "<br>";
+
 
 	
 ?>

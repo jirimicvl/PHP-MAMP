@@ -8,14 +8,19 @@ $candy=[
   
   $tax = 20;
   
-  function get_reorder_message(int $stock): string {
-    return ($stock< 10) ? 'Yes' : 'No';}
+    function get_reorder_message(int $stock): string {
+    return ($stock< 10) ? 'Yes' : 'No';
+    }
     
     function get_total_value(float $price, int $quantity): float{
-        return $price * $quantity;}
+    return $price * $quantity;
+    }
     
     function get_tax_due(float $price, int $quantity, int $tax=0 ): float{
-      return ($price * $quantity) * ($tax / 100);}?>
+    return ($price * $quantity) * ($tax / 100);
+    }
+
+?>
 
         <!DOCTYPE html>
         <html>
@@ -38,14 +43,9 @@ $candy=[
                 </tr>
                 <?php foreach ($candy as $product=> $data) { ?>
                 <tr>
-                    <td>
-                        <?=$product ?>
-                    </td>
-                    <td>
-                        <?=$data[ 'stock'] ?>
-                    </td>
-                    <td>
-                        <?=get_reorder_message($data[ 'stock']) ?>
+                    <td><?=$product ?></td>
+                    <td><?=$data[ 'stock'] ?></td>
+                    <td><?=get_reorder_message($data[ 'stock']) ?>
                     </td>
                     <td>
                         <?=get_total_value($data[ 'price'], $data[ 'stock']) ?>
