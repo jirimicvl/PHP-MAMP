@@ -23,12 +23,41 @@
 
 		Step 5: Instantiate the class / create object and call it pitbull
 
-Step 6: Call the method ShowAll
-
-	
-
-		
+    Step 6: Call the method ShowAll
 	*/
+
+  class Dog {
+    public $name;
+    public $furColor;
+    public $eyeColor;
+
+    function get_name($name) {
+      return $this->name = $name;
+    }
+
+    function get_eye_color($eyeColor) {
+      return $this->eyeColor = $eyeColor;
+    }
+
+    function get_fur_color ($furColor) {
+      return $this->furColor = $furColor;
+    }
+
+    public static function ShowAll($name, $furColor, $eyeColor) {
+      return $name . $eyeColor . $furColor . "<br/>";
+    }
+
+  }
+
+  $pitbull = new Dog();
+  $pitbull->get_name('Pitbull');
+  $pitbull->get_eye_color('Blue');
+  $pitbull->get_fur_color('Green');
+  
+  echo $pitbull->name . $pitbull->furColor . $pitbull->eyeColor . "<br/>";
+
+  echo Dog::ShowAll('Corgi', 'Brown', 'Yellow');
+  echo Dog::ShowAll('Chihuahua', 'white', 'red');
 
 		?>
 
