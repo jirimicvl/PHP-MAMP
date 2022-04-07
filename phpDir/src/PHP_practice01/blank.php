@@ -10,13 +10,13 @@
 	    echo "Username and Password field cannot be blank";
 	  }
 
-      $host = "db";
-      $dbname = "loginapp";
-      $dbuser = "root";
-      $dbpass= "lionPass";
+      $host = "db"; //servername normally localhost
+      $dbname = "loginapp"; // database name
+      $dbuser = "root"; //  username
+      $dbpass= "lionPass"; //userpassword
 
       // Step 1) PDO 2) MYSQLI
-      $connection = new mysqli($host, $dbuser,$dbpass, $dbname);
+      $connection = new mysqli($host, $dbuser, $dbpass, $dbname);
 
 	  if($connection->connect_error) {
         die("Connection failed" . $connection->error);
