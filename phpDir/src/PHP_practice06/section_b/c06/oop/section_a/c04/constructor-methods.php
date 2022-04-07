@@ -24,7 +24,7 @@ class Account {
     return $this->type = $type;
   }
 
-  function set_balance($balance) {
+  function get_balance($balance) {
     return $this->balance = $balance;
   }
 
@@ -34,7 +34,7 @@ class Account {
     return $balance += $number;
   }
 
-  function withdraw ($balance, $number): float  {
+  function withdraw ($balance, $number): float {
     return $balance -= $number;
   }
 
