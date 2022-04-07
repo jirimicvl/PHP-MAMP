@@ -25,25 +25,16 @@
       } else {
           echo "Connection ok";
       }
-      
-      if ($user && $pass) {
-	    echo $user . " " . $pass;
-	  } else {
-	    echo "Username and Password field cannot be blank <br/>";
-	  }
 
       $query = "INSERT INTO Users(username, password)";
-      $query .= "VALUES ('$user'),('$pass')";
+      $query .= "VALUES ('$user','$pass')";
 
       $result = mysqli_query($connection, $query);
 
       if (!$result) {
           die('Query failed');
-        } else {
-            echo "QUery success";
-        }
+        } 
 
-      
 	}
 	
 ?>
