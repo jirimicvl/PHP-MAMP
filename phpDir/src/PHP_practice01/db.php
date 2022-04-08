@@ -13,8 +13,4 @@
       else {
           echo "Connection ok";
       }
-
-      
-
-
 ?>
