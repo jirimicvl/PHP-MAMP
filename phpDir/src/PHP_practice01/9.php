@@ -1,3 +1,12 @@
+<?php
+ $name = "testing";
+ $count = 5;
+ $expiry = time() + (60*60*24*7);
+ 
+ setcookie($name, $value, $expiry);
+
+?>
+
 <?php include "functions.php"; ?>
 <?php include "includes/header.php"; ?>
 
@@ -19,6 +28,15 @@
 
 
     <?php
+   
+
+    if (isset($_COOKIE[$name])) {
+      $display = $_POST[$expiry];
+      echo $display;
+    } else {
+      $display = "";
+    }
+    
 
 		/*  Create a link saying Click Here, and set 
 	the link href to pass some parameters and use the GET super global to see it
@@ -28,9 +46,12 @@
 		Step 3 - Start a session and set it to value, any value you want.
 	*/
 
+  // if(isset($_POST['submit'])) {
+  //   echo $_GET['submit'];
+  // }
 		?>
 
-
+<!-- <a href="9.php?source=1234">Click Here!</a> -->
 
 
 

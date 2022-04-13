@@ -28,6 +28,15 @@
     <tr>
       <td><a href="section_a/c04/">Chapter 4: Objects</a></td>
     </tr>
+    <tr>
+      <td><a href="section_a/c05/">Chapter 5: Objects</a></td>
+    </tr>
+    <tr>
+      <td><a href="section_a/c06/">Chapter 6: Objects</a></td>
+    </tr>
+    <tr>
+      <td><a href="section_a/c07/">Chapter 7: Objects</a></td>
+    </tr>
 
 
   </table>
