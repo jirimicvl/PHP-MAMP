@@ -32,6 +32,23 @@ if (isset($_POST['submit'])) {
     echo "Connected to MySQL server successfully!";
   }
 
+  // Sanitise the$user
+  $user = mysqli_real_escape_string($conn,$user);
+  // $pass = mysqli_real_escape_string($conn,$pass);
+
+  //Password encrupt
+  //This 
+  $hashFormat = "2y$10$";
+  $salt = "salty";
+  $hashFormatAndSalt = $hashFormat . $salt;
+  $pass = crypt($pass, $hashFormatAndSalt);
+
+  //Works doesnt work
+  // $hashFormat = "2y$10$";
+  // $salt = "whateversaltisokay";
+  // $hashFormatAndSalt = $hashFormat . $salt;
+  // $pass = crypt($pass, $hashFormatAndSalt);
+
   // Create the records inside db
   $query = "INSERT INTO Users(username,password)";
   $query .= "VALUES ('$user', '$pass')";

@@ -26,6 +26,18 @@
 		Step 4 - echo the variable
 
 	*/
+
+	$text = "sometext";
+
+	$hashFormat = "$2y$05$";
+	$salt = "thisisthesaltanditneedstobe22charlong$";
+	$hashFormatAndSalt = $hashFormat . $salt;
+  	// $text = crypt_md5($text, $hashFormatAndSalt);
+
+	  $text = crypt($text, $hashFormatAndSalt);
+
+	  echo $text;
+
 	
 	?>
 
