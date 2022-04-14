@@ -12,4 +12,4 @@ if ($visited) {                           // If visited
 
 <h1><?= $greeting ?></h1>
 
-<?php include 'includes/footer.php'; ?> 
+<?php include 'includes/footer.php'; ?>

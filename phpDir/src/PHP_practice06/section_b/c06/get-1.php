@@ -14,16 +14,13 @@ $cities = [
 $city = $_GET["city"];
 $address = $cities[$city];
 
-
 ?>
 <?php include 'includes/header.php' ?>
-
 
 <?php foreach ($cities as $key => $value) { ?>
     <a href="get-1.php?city=<?= $key ?>"><?= $key ?></a> 
     <?php } ?>
     <h1><?= $city ?></h1>
     <h1><?= $address ?></h1>
-
 
 <?php include 'includes/footer.php' ?>

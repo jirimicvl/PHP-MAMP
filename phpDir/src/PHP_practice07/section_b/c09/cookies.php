@@ -12,16 +12,21 @@ and also store the value from the variable in that cookie
 
 Step 4: A new variable should hold message saying the number of pages the visitor has viewed.
 e.g. "Page views: "
-
-
-
 */
+
+$counter = $_COOKIE['counter'] ?? ""; // Get data
+$counter = intval($counter) + 1; // increment
+$message = "Dont want to think about it";
+setcookie('counter', $counter);
+
+
 
 ?>
 
-<?php include 'includes/header.php'; ?> 
+<?php include 'includes/header.php'; ?>
 
 <h1><?= $message ?></h1>
-<p><a href="sessions.php"> Refresh this page </a> to see the page views increase </p>
+<p><a href="sessions.php"> Refresh this page </a> to see the page views increase</p>
+<p>Page view: <?php echo $counter;?></p>
 
 <?php include 'includes/footer.php'; ?> 

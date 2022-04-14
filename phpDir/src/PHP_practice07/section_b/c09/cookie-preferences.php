@@ -17,9 +17,20 @@ that user selected from the select box. It also:
 
 Step 5: You may now use ternary to check if the value in color is in the options array. 
 If it is, the value should be saved to some other variable and it not, store the value of 'dark'.
-
-
 */
+
+$color = $_COOKIE["color"] ?? null; //check for cookie value
+// $options = ['light', 'dark']; // santosh answer
+
+if($_SERVER['REQUEST_METHOD'] == 'POST'){
+  $color = $_POST["color"];
+  setcookie('color', $color, time() + 60*60, '/', '', false, true);
+}
+
+// $scheme = (in_array($color, $options)) ? $color : 'dark'; //Santosh answer
+// ? $color : 'dark' == means the default color
+$scheme = (in_array($color, ['light', 'dark'])) ? $color : 'dark'; // My answer
+
 ?>
 <?php include 'includes/header-style-switcher.php'; ?>
 <form method="POST" action="cookie-preferences.php">
@@ -28,6 +39,6 @@ If it is, the value should be saved to some other variable and it not, store the
     <option value="dark">Dark</option>
     <option value="light">Light</option>
   </select><br>
-  <input type="submit" value="Save">
+  <input type="submit" value="Save" name="submit">
 </form>
 <?php include 'includes/footer.php'; ?>
