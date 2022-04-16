@@ -15,6 +15,7 @@ $city = $_GET["city"];
 $address = $cities[$city];
 
 ?>
+
 <?php include 'includes/header.php' ?>
 
 <?php foreach ($cities as $key => $value) { ?>
