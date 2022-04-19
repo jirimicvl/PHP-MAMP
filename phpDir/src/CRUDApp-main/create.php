@@ -1,8 +1,4 @@
-<?php /*
-if (isset($_POST['submit'])) {
-  echo "yes received the data";
-}
-*/ ?>
+
 <?php
 if (isset($_POST['submit'])) {
   //echo "yes received the data";
