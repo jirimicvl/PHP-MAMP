@@ -5,13 +5,13 @@
 header('Access-Control-Allow-Origin: *');
 header('Access-Control-Allow-Methods: GET, POST, PATCH, PUT, DELETE, OPTIONS');
 header('Access-Control-Allow-Headers: Origin, Content-Type, X-Auth-Token');
-echo "Testing PHP Api";
+// echo "Testing PHP Api";
 
 // phpinfo();
 
 $objectDB = new DBConnect;
 $conn = $objectDB->connect();
-var_dump($conn);
+// var_dump($conn);
 
 // print_r(file_get_contents('php://input'));
 
@@ -33,9 +33,9 @@ switch($method) {
     $stmt->bindParam(':updated_at', $updated_at);
     
     if ($stmt->execute()) {
-    $response = ['status'=>1, 'message'=> 'Record created successfully.'];
+    $response = ['status'=> 1, 'message'=> 'Record created successfully.'];
     } else {
-    $response = ['status'=>0, 'message'=> 'Failed to insert or create record.'];
+    $response = ['status'=> 0, 'message'=> 'Failed to insert or create record.'];
     }
     echo json_encode($response);
     break;
@@ -44,7 +44,7 @@ switch($method) {
         $sql = "SELECT * FROM users";
         $stmt = $conn->prepare($sql);
         $stmt->execute();
-        $users = $stmt-> fetchall(PDO::FETCH_ASSOC);
+        $users = $stmt-> fetchAll(PDO::FETCH_ASSOC);
         echo json_encode($users);
         break;
     }
