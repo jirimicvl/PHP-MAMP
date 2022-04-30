@@ -1,103 +1,61 @@
-<?php require "config.php"; ?>
-
 <?php
-  if (isset($_POST['submit'])) {
-    $text = $_POST['text'];
 
-    //Validate the form
-    if ($text) {
-    // echo $text;
-    } else {
-      echo "Username and password fields cannot be blank";
-    }
+    include "logic.php";
 
-    // Add data into todo database
-    $add = "INSERT INTO todoTable(text)";
-    $add .= "VALUES ('$text')";
-    $added = mysqli_query($conn, $add);
-  }
 ?>
 
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <link rel="stylesheet" href="css/style.css">
-  <title>Todo List</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+
+    <title>Blog using PHP & MySQL</title>
 </head>
-
 <body>
-  <h1>PHP ToDo list</h1>
-  <form action="index.php" method="post">
-    <label for="text"> </label>
-    <input type="text" name="text">
-    <input type="submit" name="submit" value="Submit">
-  </form>
 
-  <?php
-    // Shows all the data WORKS
-    $query = "SELECT * FROM todoTable";
-    $result = mysqli_query($conn, $query);
-  ?>
+    <div class="container mt-5">
 
-  <?php
-  //Delete WORKS
-  if (isset($_GET['delete'])) {
-    $id = $_GET['delete'];
-    mysqli_query($conn, "DELETE FROM todoTable WHERE id=".$id);
-    // header("location:index.php");
-  } 
-  ?>
+        <!-- Display any info -->
+        <?php if(isset($_REQUEST['info'])){ ?>
+            <?php if($_REQUEST['info'] == "added"){?>
+                <div class="alert alert-success" role="alert">
+                    Post has been added successfully
+                </div>
+            <?php }?>
+        <?php } ?>
 
-  <?php
-   //Update DONT WORK!!
-  if(isset($_GET["edit"])) {
- 
-    $id = $_GET["id"];
-    $text = $_GET["text"];
-    // $edit = $_GET["edit"];
+        <!-- Create a new Post button -->
+        <div class="text-center">
+            <a href="create.php" class="btn btn-outline-dark">+ Create a new post</a>
+        </div>
 
-    // UPDATE `todoTable` SET `id`='[value-1]',`text`='[value-2]',`dateCreated`='[value-3]',`checked`='[value-4]' WHERE 1
+        <!-- Display posts from database -->
+        <div class="row">
+            <?php foreach($query as $q){ ?>
+                <div class="col-12 col-lg-4 d-flex justify-content-center">
+                    <div class="card text-white bg-dark mt-5" style="width: 18rem;">
+                        <div class="card-body">
+                            <h5 class="card-title"><?php echo $q['title'];?></h5>
+                            <p class="card-text"><?php echo substr($q['content'], 0, 50);?>...</p>
+                            <a href="view.php?id=<?php echo $q['id']?>" class="btn btn-light">Read More <span class="text-danger">&rarr;</span></a>
+                        </div>
+                    </div>
+                </div>
+            <?php }?>
+        </div>
+       
+    </div>
 
-    $update= "UPDATE `todoTable` SET `text` = '$edit' WHERE `todoTable`.`id`=".$id; 
-    $result = mysqli_query($conn, $update);
-    if (!$result) {
-      die('Query update failed');
-    }
-  }
-  ?>
-
-
-  <div class="toDoContainer">
-    <?php
-      while ($row = mysqli_fetch_assoc($result)) {
-      ?>
-      <div class="contentItem">
-          <input type="checkbox">
-          <h2><?php echo $row['text']?></h2> 
-          <br>
-          <small>Created: <?php echo $row['dateCreated']?></small>
-          <button class="delete" name="delete"> 
-					  <a href="index.php?delete=<?php echo $row['id'] ?>">Delete</a> 
-          </button>
-          <button class="update" name="update"> 
-					  <a href="index.php?update=<?php echo $row['id'] ?>">Update</a> 
-          </button>
-
-          <!-- <a href="index.php?delete=<
-            ?php echo $row['id']?>">Delete</a> -->
-      </div>
-    <?php } ?>
-  </div>
-
-
-  
-
-
+    <!-- Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
 
 </body>
-
 </html>
+
+
