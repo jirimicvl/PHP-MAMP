@@ -1,0 +1,18 @@
+.sidebar { grid-area: sidebar; }
+.form { grid-area: form; }
+.blogContainer { grid-area: container; }
+
+.grid-container {
+    display: grid;
+    grid-template-areas:
+    'sidebar form'
+    'sidebar container'
+    'sidebar container'
+    '. container'
+    '. container'
+    '. container'
+    ;
+    grid-gap: 10px;
+    /* background-color: #2196F3; */
+    padding: 10px;
+  }

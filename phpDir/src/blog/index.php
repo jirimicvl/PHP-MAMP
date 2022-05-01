@@ -25,63 +25,65 @@
     <h1>Tweeter</h1>
   </header>
 
-  <nav class="sidebar">
-    <a class="active" href="#home">Home</a>
-    <a href="#news">News</a>
-    <a href="#contact">Contact</a>
-    <a href="#about">About</a>
-  </nav>
-
-  <!-- Input for content -->
-
- 
-  <form action="index.php?action=submit" method="post" enctype="multipart/form-data">
+  <div class="grid-container">
+  
+    <nav class="sidebar">
+      <a class="active" href="#home">Home</a>
+      <a href="#news">News</a>
+      <a href="#contact">Contact</a>
+      <a href="#about">About</a>
+    </nav>
 
     <!-- Input for content -->
-    <label for="content"> </label>
-    <input type="text" name="content" placeholder="What's happening?">
 
-    <label for="uploadFiles"> </label>
-    <input type="file" name="uploadFiles" id="fileToUpload">
+  
+    <form action="index.php?action=submit" method="post" enctype="multipart/form-data" class="form">
 
-    <!-- Submit Button -->
-    <input type="submit" name="submit" value="Submit">
-  </form>
+      <!-- Input for content -->
+      <label for="content"> </label>
+      <input type="text" name="content" placeholder="What's happening?">
 
-  <?php require "allData.php"; ?>
+      <label for="uploadFiles"> </label>
+      <input type="file" name="uploadFiles" id="fileToUpload">
 
-  <div class="blogContainer">
-    <?php
-      while ($row = mysqli_fetch_assoc($result)) {
-      ?>
-      <div class="contentItem">
-          <p><?php echo $row['content']?></p>
-          <br>
-          <small><?php echo date($row['dateCreated']);?></small>
+      <!-- Submit Button -->
+      <input type="submit" name="submit" value="Submit">
+    </form>
 
-          <button class="delete" name="delete"> 
-					  <a href="index.php?delete=<?php echo $row['id'] ?>">Delete</a> 
-          </button>
+    <?php require "allData.php"; ?>
 
-          <!--
-          <small><?php echo date('Y-m-d',strtotime(intval($row['dateCreated'])));?></small>
-          <small><?php echo date('h:i:sa', strtotime(intval($row['dateCreated'])));?></small>
-          
+    <div class="blogContainer">
+      <?php
+        while ($row = mysqli_fetch_assoc($result)) {
+        ?>
+        <div class="contentItem">
+            <p><?php echo $row['content']?></p>
+            <br>
+            <small><?php echo date($row['dateCreated']);?></small>
 
-        
-            <button class="update" name="update"> 
-              <a href="index.php?update=<?php echo $row['id'] ?>">Update</a> 
+            <button class="delete" name="delete"> 
+              <a href="index.php?delete=<?php echo $row['id'] ?>">Delete</a> 
             </button>
 
-            <a href="index.php?delete=<
-              ?php echo $row['id']?>">Delete</a> 
+            <!--
+            <small><?php echo date('Y-m-d',strtotime(intval($row['dateCreated'])));?></small>
+            <small><?php echo date('h:i:sa', strtotime(intval($row['dateCreated'])));?></small>
             
-          -->
-            
-      </div>
-    <?php } ?>
-  </div>
 
+          
+              <button class="update" name="update"> 
+                <a href="index.php?update=<?php echo $row['id'] ?>">Update</a> 
+              </button>
+
+              <a href="index.php?delete=<
+                ?php echo $row['id']?>">Delete</a> 
+              
+            -->
+              
+        </div>
+      <?php } ?>
+    </div>
+  </div>
 
   
 

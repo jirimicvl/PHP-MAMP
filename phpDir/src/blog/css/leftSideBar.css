@@ -2,7 +2,8 @@
 
 .sidebar {
     display: inline-block;
-    border: 2px solid black;
+    border: 2px solid rgb(215, 128, 128);
+    height: 700px;
 }
 
 /* .sidebar {
