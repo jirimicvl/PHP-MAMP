@@ -45,14 +45,18 @@
       <div class="contentItem">
           <p><?php echo $row['content']?></p>
           <br>
+          <small><?php echo date($row['dateCreated']);?></small>
 
-          <small><?php echo date('Y-m-d',strtotime(intval($row['dateCreated'])));?></small>
-          <small><?php echo date('h:i:sa', strtotime(intval($row['dateCreated'])));?></small>
           <button class="delete" name="delete"> 
 					  <a href="index.php?delete=<?php echo $row['id'] ?>">Delete</a> 
           </button>
 
           <!--
+          <small><?php echo date('Y-m-d',strtotime(intval($row['dateCreated'])));?></small>
+          <small><?php echo date('h:i:sa', strtotime(intval($row['dateCreated'])));?></small>
+          
+
+        
             <button class="update" name="update"> 
               <a href="index.php?update=<?php echo $row['id'] ?>">Update</a> 
             </button>
