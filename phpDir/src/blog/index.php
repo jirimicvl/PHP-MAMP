@@ -16,7 +16,13 @@
 </head>
 
 <body>
-  <h1>Tweeter</h1>
+  <header>
+    <h1>Tweeter</h1>
+  </header>
+
+  <!-- Input for content -->
+
+ 
   <form action="index.php?action=submit" method="post" enctype="multipart/form-data">
 
     <!-- Input for content -->

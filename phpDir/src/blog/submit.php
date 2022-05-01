@@ -13,5 +13,6 @@
     $add = "INSERT INTO blogTable(content)";
     $add .= "VALUES ('$content')";
     $added = mysqli_query($conn, $add);
+    
   }
 ?>
