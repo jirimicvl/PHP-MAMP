@@ -1,0 +1,12 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+/* Removed the lines */
+a {
+    text-decoration: none;
+}
+
+form {
+    display: inline-block;
+}

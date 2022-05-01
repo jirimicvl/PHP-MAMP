@@ -11,7 +11,12 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+  <!-- CSS  -->
   <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/leftSideBar.css">
+  <link rel="stylesheet" href="css/layout.css">
+
   <title>Blog</title>
 </head>
 
@@ -20,6 +25,13 @@
     <h1>Tweeter</h1>
   </header>
 
+  <nav class="sidebar">
+    <a class="active" href="#home">Home</a>
+    <a href="#news">News</a>
+    <a href="#contact">Contact</a>
+    <a href="#about">About</a>
+  </nav>
+
   <!-- Input for content -->
 
  
@@ -27,7 +39,7 @@
 
     <!-- Input for content -->
     <label for="content"> </label>
-    <input type="text" name="content" placeholder="content">
+    <input type="text" name="content" placeholder="What's happening?">
 
     <label for="uploadFiles"> </label>
     <input type="file" name="uploadFiles" id="fileToUpload">
