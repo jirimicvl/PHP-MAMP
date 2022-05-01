@@ -1,22 +1,6 @@
 <?php require "config.php"; ?>
-
-<?php
-  if (isset($_POST['submit'])) {
-    $text = $_POST['text'];
-
-    //Validate the form
-    if ($text) {
-    // echo $text;
-    } else {
-      echo "Username and password fields cannot be blank";
-    }
-
-    // Add data into todo database
-    $add = "INSERT INTO blogTable(text)";
-    $add .= "VALUES ('$text')";
-    $added = mysqli_query($conn, $add);
-  }
-?>
+<?php require "submit.php"; ?>
+<?php require "delete.php"; ?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -31,52 +15,22 @@
 
 <body>
   <h1>PHP Blog list</h1>
-  <form action="index.php" method="post">
+  <form action="index.php?action=submit" method="post">
     
   
     <!-- Input for title -->
-    <label for="title"> </label>
-    <input type="text" name="title">
+    <label for="title"></label>
+    <input type="text" name="title" placeholder="title">
 
     <!-- Input for content -->
     <label for="text"> </label>
-    <input type="text" name="text">
+    <input type="text" name="content" placeholder="content">
+
+    <!-- Submit Button -->
     <input type="submit" name="submit" value="Submit">
   </form>
 
-  <?php
-    // Shows all the data WORKS
-    $query = "SELECT * FROM blogTable";
-    $result = mysqli_query($conn, $query);
-  ?>
-
-  <?php
-  //Delete WORKS
-  if (isset($_GET['delete'])) {
-    $id = $_GET['delete'];
-    mysqli_query($conn, "DELETE FROM blogTable WHERE id=".$id);
-    // header("location:index.php");
-  } 
-  ?>
-
-  <?php
-   //Update DONT WORK!!
-  if(isset($_GET["edit"])) {
- 
-    $id = $_GET["id"];
-    $text = $_GET["text"];
-    // $edit = $_GET["edit"];
-
-    // UPDATE `todoTable` SET `id`='[value-1]',`text`='[value-2]',`dateCreated`='[value-3]',`checked`='[value-4]' WHERE 1
-
-    $update= "UPDATE `blogTable` SET `text` = '$edit' WHERE `todoTable`.`id`=".$id; 
-    $result = mysqli_query($conn, $update);
-    if (!$result) {
-      die('Query update failed');
-    }
-  }
-  ?>
-
+  <?php require "allData.php"; ?>
 
   <div class="blogContainer">
     <?php
@@ -84,7 +38,8 @@
       ?>
       <div class="contentItem">
           <input type="checkbox">
-          <h2><?php echo $row['text']?></h2> 
+          <h2><?php echo $row['title']?></h2>
+          <p><?php echo $row['content']?></p>
           <br>
           <small>Created: <?php echo $row['dateCreated']?></small>
           <button class="delete" name="delete"> 
