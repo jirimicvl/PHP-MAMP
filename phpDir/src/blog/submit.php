@@ -1,7 +1,6 @@
 <?php
   if (isset($_POST['submit'])) {
     $content = $_POST['content'];
-    $title = $_POST['title'];
 
     //Validate the form
     if ($content) {
@@ -11,8 +10,8 @@
     }
 
     // Add data into todo database
-    $add = "INSERT INTO blogTable(title, content)";
-    $add .= "VALUES ('$title','$content')";
+    $add = "INSERT INTO blogTable(content)";
+    $add .= "VALUES ('$content')";
     $added = mysqli_query($conn, $add);
   }
 ?>
