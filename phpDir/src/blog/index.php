@@ -21,13 +21,15 @@
 </head>
 
 <body>
-  <header>
-    <h1>Tweeter</h1>
-  </header>
+ 
 
   <div class="grid-container">
+
   
     <nav class="sidebar">
+      <header>
+      <h1>Tweeter</h1>
+      </header>
       <a class="active" href="#home">Home</a>
       <a href="#news">News</a>
       <a href="#contact">Contact</a>
