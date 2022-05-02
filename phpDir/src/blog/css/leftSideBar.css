@@ -1,19 +1,10 @@
-/* .sidebar {
+.sidebar {
     display: flex;
     flex-direction: column;
-    border: 2px solid rgb(28, 24, 24);
+    border: 2px solid rgb(157, 5, 5);
     height: 700px;
-} */
+}
 
-/* .sidebar {
-    margin: 0;
-    padding: 0;
-    width: 200px;
-    background-color: #f1f1f1;
-    position: fixed;
-    height: 100%;
-    overflow: auto;
-  }
-  
-
-  
+.sidebar a {
+margin: 10px 10px;
+}

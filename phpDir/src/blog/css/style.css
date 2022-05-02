@@ -4,9 +4,11 @@
 }
 /* Removed the lines */
 a {
+    color: black !important;
     text-decoration: none;
 }
 
 form {
     display: inline-block;
 }
+

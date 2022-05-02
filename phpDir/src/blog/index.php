@@ -16,7 +16,10 @@
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="css/leftSideBar.css">
   <link rel="stylesheet" href="css/layout.css">
-  
+  <link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.no-icons.min.css" rel="stylesheet">
+  <link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
+  <link rel="stylesheet" href="path/to/bootstrap/css/bootstrap.min.css">
+  <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
     
     <title>Blog</title>
 </head>
@@ -27,12 +30,8 @@
   <div class="grid-container">
 
   
-    <nav class="sidebar">
-      <header>
-      <h1>Tweeter</h1>
-      </header>
-    
-      
+    <nav class="sidebar">    
+      <i class="fa-brands fa-twitter"></i>
       <a href="#">Home</a>
       <a href="#">Explore</a>
       <a href="#">Notifications</a>
