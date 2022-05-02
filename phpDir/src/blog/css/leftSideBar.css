@@ -1,9 +1,9 @@
-.sidebar {
+/* .sidebar {
     display: flex;
     flex-direction: column;
     border: 2px solid rgb(28, 24, 24);
     height: 700px;
-}
+} */
 
 /* .sidebar {
     margin: 0;
@@ -15,9 +15,5 @@
     overflow: auto;
   }
   
-.sidebar a {
-    display: block;
-    color: black;
-    padding: 16px;
-    text-decoration: none;
-} */
+
+  
