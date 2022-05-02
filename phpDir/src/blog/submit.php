@@ -2,6 +2,7 @@
   if (isset($_POST['submit'])) {
     $content = $_POST['content'];
 
+
     //Validate the form
     if ($content) {
     // echo $text;
@@ -15,4 +16,5 @@
     $added = mysqli_query($conn, $add);
     
   }
+
 ?>

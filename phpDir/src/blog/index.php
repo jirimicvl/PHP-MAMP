@@ -46,7 +46,7 @@
       <input type="text" name="content" placeholder="What's happening?">
 
       <label for="uploadFiles"> </label>
-      <input type="file" name="uploadFiles" id="fileToUpload">
+      <input type="file" name="file" id="fileToUpload">
 
       <!-- Submit Button -->
       <input type="submit" name="submit" value="Submit">
