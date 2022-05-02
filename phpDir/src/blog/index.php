@@ -15,6 +15,7 @@
   <!-- CSS  -->
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="css/leftSideBar.css">
+  <link rel="stylesheet" href="css/rightSideBar.css">
   <link rel="stylesheet" href="css/layout.css">
   <link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.no-icons.min.css" rel="stylesheet">
   <link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
@@ -26,10 +27,8 @@
 
 <body>
  
-
+  <!-- Left navbar -->
   <div class="grid-container">
-
-  
     <nav class="sidebar">    
       <i class="fa-brands fa-twitter"></i>
       <a href="#">Home</a>
@@ -41,10 +40,27 @@
       <a href="#">Profile</a>
       <a href="#">More</a>
 
+      <div class="tweetButton">Tweet</div>
 
-
+      <div class="userProfileContainer">
+        <div>Username</div>
+        <div>@username</div>
+      </div>
     </nav>
 
+    <!-- Right navbar 
+    <nav class="rightSidebar">    
+      <input type="text" class="search">
+      <a href="#">Explore</a>
+      <a href="#">Notifications</a>
+      <a href="#">Messages</a>
+      <a href="#">Bookmarks</a>
+      <a href="#">Lists</a>
+      <a href="#">Profile</a>
+      <a href="#">More</a>
+    </nav> 
+    -->
+    
     <!-- Input for content -->
 
   
