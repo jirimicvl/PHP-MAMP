@@ -16,8 +16,9 @@
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="css/leftSideBar.css">
   <link rel="stylesheet" href="css/layout.css">
-
-  <title>Blog</title>
+  
+    
+    <title>Blog</title>
 </head>
 
 <body>
@@ -30,10 +31,19 @@
       <header>
       <h1>Tweeter</h1>
       </header>
-      <a class="active" href="#home">Home</a>
-      <a href="#news">News</a>
-      <a href="#contact">Contact</a>
-      <a href="#about">About</a>
+    
+      
+      <a href="#">Home</a>
+      <a href="#">Explore</a>
+      <a href="#">Notifications</a>
+      <a href="#">Messages</a>
+      <a href="#">Bookmarks</a>
+      <a href="#">Lists</a>
+      <a href="#">Profile</a>
+      <a href="#">More</a>
+
+
+
     </nav>
 
     <!-- Input for content -->
