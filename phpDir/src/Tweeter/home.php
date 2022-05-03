@@ -60,7 +60,12 @@
       <a href="#">More</a>
     </nav> 
     -->
-    
+
+ 
+    <nav class="rightSidebar">    
+      <input type="text" class="search" placeholder="Search Tweeter">
+    </nav> 
+
     <!-- Input for content -->
 
   

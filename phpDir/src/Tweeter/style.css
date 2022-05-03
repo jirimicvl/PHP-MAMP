@@ -23,7 +23,7 @@ body {
 
 .image {
   height: 100%;
-  background: url('css/cover-img.png') center center/cover !important;
+  background: url('img/cover-img.png') center center/cover;
   flex: 0 1 53vw;
   position: relative;
 }
