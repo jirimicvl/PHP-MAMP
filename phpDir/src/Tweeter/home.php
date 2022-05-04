@@ -17,6 +17,7 @@
   <link rel="stylesheet" href="css/leftSideBar.css">
   <link rel="stylesheet" href="css/rightSideBar.css">
   <link rel="stylesheet" href="css/layout.css">
+  <link rel="stylesheet" href="css/posts.css">
   <link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.no-icons.min.css" rel="stylesheet">
   <link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
   <link rel="stylesheet" href="path/to/bootstrap/css/bootstrap.min.css">
@@ -38,6 +39,7 @@
       <a href="#">Bookmarks</a>
       <a href="#">Lists</a>
       <a href="#">Profile</a>
+      <a href="logout.php">LogOut</a>
       <a href="#">More</a>
 
       <div class="tweetButton">Tweet</div>
@@ -69,7 +71,7 @@
     <!-- Input for content -->
 
   
-    <form action="index.php?action=submit" method="post" enctype="multipart/form-data" class="form">
+    <form action="home.php?action=submit" method="post" enctype="multipart/form-data" class="form">
 
       <!-- Input for content -->
       <label for="content"> </label>
@@ -94,7 +96,7 @@
             <small><?php echo date($row['dateCreated']);?></small>
 
             <button class="delete" name="delete"> 
-              <a href="index.php?delete=<?php echo $row['id'] ?>">Delete</a> 
+              <a href="home.php?delete=<?php echo $row['id'] ?>">Delete</a> 
             </button>
 
             <!--
@@ -111,7 +113,6 @@
                 ?php echo $row['id']?>">Delete</a> 
               
             -->
-              
         </div>
       <?php } ?>
     </div>

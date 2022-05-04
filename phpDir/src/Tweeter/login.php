@@ -26,3 +26,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST') {     // If form submitted
 </form>
 
 {# <?php include 'includes/footer.php'; ?> #}
+
+
+
+

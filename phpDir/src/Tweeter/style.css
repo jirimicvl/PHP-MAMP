@@ -6,12 +6,15 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  
 }
 
 body {
   font-family: 'Lato', sans-serif;
   min-height: 100vh;
   overflow-x: hidden;
+  background-color: black !important;
+  /* color: white !important; */
 }
 
 .container {
@@ -35,6 +38,7 @@ body {
   align-items: flex-start;
   justify-content: space-evenly;
   padding: 2rem;
+
 }
 
 .big-bird {
@@ -52,7 +56,7 @@ body {
 }
 
 h1, h3 {
-  color: #0f1419;
+  color: white;
   font-weight: 900;
 }
 
