@@ -132,11 +132,19 @@ h3 {
 
 .terms {
   display: flex;
+  flex-wrap: wrap;
+  /* border: 1px solid white;
   align-items: center;
-  justify-content: center;
+  justify-content: center; */
   width: 20rem;
   color:rgb(113, 118, 123);
   font-size: 0.7em;
+}
+
+small a:link {
+  color: #1da1f2 !important;
+  background-color: transparent;
+  text-decoration: none;
 }
 
 
